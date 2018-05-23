@@ -57,8 +57,16 @@ class DeepLabModel(object):
         batch_seg_map = self.sess.run(
             self.OUTPUT_TENSOR_NAME,
             feed_dict={self.INPUT_TENSOR_NAME: [np.asarray(resized_image)]})    #asarray将列表[]转化为数组([])
+                        # numpy.asarray(a,'f')  #将图片以数组的形式传入graph，转换的时候可以设置类型
+                        # array([ 1.,  2.], dtype=float32) 
         seg_map = batch_seg_map[0]  #batch_seg_map比seg_map多了一维
 
+        # print('image dtype :',image.dtype)  #'JpegImageFile' object has no attribute 'dtype'
+        # print('resized_image dtype:',resized_image[0].dtype)#'Image' object does not support indexing
+        # print('resized_image dtype:',resized_image.dtype)#''Image' object has no attribute 'dtype'
+        # print('resized_image dtype:',resized_image.dtype)#''Image' object has no attribute 'dtype'
+        print('batch_seg_map dtype:',batch_seg_map[0].dtype)#int64
+        # print('seg_map dtype:',seg_map[0].dtype)#int64
         return resized_image, seg_map
 
 def create_pascal_label_colormap():

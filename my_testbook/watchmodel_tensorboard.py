@@ -14,3 +14,5 @@ writer = tf.summary.FileWriter("F:\\Loglib\\log", graph)
 #如果使用graphdef会有警告，graphdef是类似tf的关键字
 # writer.close()
 # 然后打开anaconda promote ，输入tensorboard --logdir “所在地址”
+# 然后打开anaconda promote ，输入tensorboard --logdir F:/Loglib/log
+# 最后这句命令是控制台命令，寻址符号要反过来/,而不是\
