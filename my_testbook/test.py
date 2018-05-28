@@ -51,4 +51,5 @@ def test_argmax_dtype():
 
 
 if __name__ == '__main__':
-    tset_print_all_ops("F:\\Modellib\\deeplabv3_mnv2_pascal_train_aug\\frozen_inference_graph.pb")
+    # tset_print_all_ops("F:\\Modellib\\zhang1\\frozen_inference_graph_mobilenetv2.pb")
+    tset_print_all_ops("F:\\Modellib\zhang3\\test.pb")
